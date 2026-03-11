@@ -53,6 +53,10 @@
       "url": "https://cointelegraph.com/news/jito-foundation-acquires-solanafloor-to-revive-solana-ecosystem-journalism"
     }
   ],
+  "competitor": [
+    {"text": "Kraken 上线 xStocks 永续合约，首批覆盖特斯拉、英伟达等美股标的，开创交易所股票衍生品新品类。", "source": "The Block", "url": "https://www.theblock.co/post/392896/the-daily-bitcoins-mined-supply-tops-20-million-btc-nasdaq-partners-with-kraken-on-tokenization-initiative-and-more"},
+    {"text": "Coinbase 面向欧洲交易者上线 BTC 和 ETH 期货产品，完成欧洲衍生品合规布局。", "source": "Decrypt", "url": "https://decrypt.co/360420/coinbase-debuts-crypto-futures-european-traders-bitcoin-ethereum"}
+  ],
   "tradfi": [
     {
       "text": "高盛（Goldman Sachs）跻身 XRP 现货 ETF 最大持仓机构，分析师将这批机构投资者称为 XRP「超级粉丝」。",

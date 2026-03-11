@@ -50,6 +50,7 @@
   /* ── 日报 Tab ── */
   .report-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   @media (max-width: 720px) { .report-grid { grid-template-columns: 1fr; } }
+  .report-grid .card { height: 100%; }
 
   .card { background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); padding: 22px 24px; box-shadow: var(--shadow); }
   .card-title { font-size: 0.92rem; font-weight: 700; color: var(--accent); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
@@ -186,17 +187,21 @@ function renderReport(d) {
 
   let html = `
     <div class="card">
-      <div class="card-title">📌 宏观经济 &amp; 监管政策</div>
-      <div class="card-subtitle">宏观经济</div>${newsBlock(d.macro)}
-      <div class="card-subtitle">监管政策</div>${newsBlock(d.regulation)}
-    </div>
-    <div class="card">
       <div class="card-title">🚀 产品创新</div>
       ${newsBlock(d.product)}
     </div>
     <div class="card">
+      <div class="card-title">🏢 竞对动态</div>
+      ${newsBlock(d.competitor)}
+    </div>
+    <div class="card">
       <div class="card-title">🏦 传统金融动向</div>
       ${newsBlock(d.tradfi)}
+    </div>
+    <div class="card">
+      <div class="card-title">📌 宏观经济 &amp; 监管政策</div>
+      <div class="card-subtitle">宏观经济</div>${newsBlock(d.macro)}
+      <div class="card-subtitle">监管政策</div>${newsBlock(d.regulation)}
     </div>
     <div class="card market-card">
       <div class="card-title">📊 主流市场行情</div>
