@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto 行业日报</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; background: #0f1117; color: #e2e8f0; line-height: 1.7; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 40px 20px; text-align: center; border-bottom: 1px solid #2d3748; }
+  .header h1 { font-size: 2rem; font-weight: 700; color: #63b3ed; letter-spacing: 2px; }
+  .header .date { font-size: 0.95rem; color: #718096; margin-top: 8px; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
+  .section { background: #1a202c; border-radius: 12px; padding: 24px; margin-bottom: 24px; border: 1px solid #2d3748; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #63b3ed; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #2d3748; }
+  .sub-title { font-size: 0.9rem; font-weight: 600; color: #a0aec0; margin: 16px 0 10px; }
+  .news-item { padding: 12px 0; border-bottom: 1px solid #2d374860; }
+  .news-item:last-child { border-bottom: none; }
+  .news-item p { font-size: 0.95rem; color: #cbd5e0; }
+  .news-item .source { font-size: 0.8rem; color: #4299e1; margin-top: 4px; }
+  .news-item .source a { color: #4299e1; text-decoration: none; }
+  .news-item .source a:hover { text-decoration: underline; }
+  .empty { color: #4a5568; font-size: 0.9rem; font-style: italic; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  th { background: #2d3748; color: #a0aec0; font-size: 0.85rem; padding: 10px 14px; text-align: left; }
+  td { padding: 10px 14px; font-size: 0.9rem; border-bottom: 1px solid #2d374860; }
+  tr:last-child td { border-bottom: none; }
+  .up { color: #68d391; font-weight: 600; }
+  .down { color: #fc8181; font-weight: 600; }
+  .snapshot { font-size: 0.8rem; color: #718096; margin-bottom: 12px; }
+  .summary { background: #2d3748; border-radius: 8px; padding: 14px 16px; margin-top: 16px; font-size: 0.9rem; color: #cbd5e0; }
+  .footer { text-align: center; color: #4a5568; font-size: 0.8rem; padding: 30px 20px; }
+  .badge { display: inline-block; background: #2b6cb0; color: #bee3f8; font-size: 0.75rem; padding: 2px 8px; border-radius: 20px; margin-left: 8px; vertical-align: middle; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>📊 Crypto 行业日报</h1>
+  <div class="date" id="report-date">加载中...</div>
+</div>
+<div class="container" id="report-content">
+  <div class="section"><p class="empty">日报内容加载中，请稍候...</p></div>
+</div>
+<div class="footer" id="report-footer"></div>
+<script>
+  fetch('report.json?t=' + Date.now())
+    .then(r => r.json())
+    .then(d => renderReport(d))
+    .catch(() => {
+      document.getElementById('report-content').innerHTML = '<div class="section"><p class="empty">暂无数据，请稍后刷新。</p></div>';
+    });
+
+  function renderReport(d) {
+    document.getElementById('report-date').textContent = d.date + ' · 每日自动更新';
+    document.title = 'Crypto 行业日报 · ' + d.date;
+
+    let html = '';
+
+    // 板块一
+    html += `<div class="section">
+      <div class="section-title">📌 板块一：宏观经济 &amp; 监管政策</div>
+      <div class="sub-title">【宏观经济】</div>
+      ${renderNews(d.macro)}
+      <div class="sub-title">【监管政策】</div>
+      ${renderNews(d.regulation)}
+    </div>`;
+
+    // 板块二
+    html += `<div class="section">
+      <div class="section-title">🚀 板块二：产品创新</div>
+      ${renderNews(d.product)}
+    </div>`;
+
+    // 板块三
+    html += `<div class="section">
+      <div class="section-title">🏦 板块三：传统金融动向</div>
+      ${renderNews(d.tradfi)}
+    </div>`;
+
+    // 板块四
+    html += `<div class="section">
+      <div class="section-title">📊 板块四：主流市场行情</div>
+      <div class="snapshot">⏱ 价格快照时间：${d.snapshot_time}</div>
+      <table>
+        <tr><th>资产</th><th>价格</th><th>24h 涨跌</th></tr>
+        ${d.market.map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td><td class="${r[2].startsWith('+') ? 'up' : 'down'}">${r[2]}</td></tr>`).join('')}
+      </table>
+      ${d.summary ? `<div class="summary">📈 ${d.summary}</div>` : ''}
+    </div>`;
+
+    document.getElementById('report-content').innerHTML = html;
+    document.getElementById('report-footer').textContent = '由 OpenClaw 自动生成 · ' + d.generated_at;
+  }
+
+  function renderNews(items) {
+    if (!items || items.length === 0) return '<p class="empty">今日暂无重要动态</p>';
+    return items.map(n => `
+      <div class="news-item">
+        <p>${n.text}</p>
+        ${n.source ? `<div class="source">来源：<a href="${n.url}" target="_blank">${n.source}</a></div>` : ''}
+      </div>`).join('');
+  }
+</script>
+</body>
+</html>
