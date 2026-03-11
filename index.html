@@ -4,102 +4,302 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Crypto 行业日报</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
+  :root {
+    --bg: #f0f4f8;
+    --surface: #ffffff;
+    --surface2: #f8fafc;
+    --border: #e2e8f0;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+    --accent: #2563eb;
+    --accent-light: #eff6ff;
+    --up: #10b981;
+    --up-bg: #ecfdf5;
+    --down: #ef4444;
+    --down-bg: #fef2f2;
+    --neutral: #f59e0b;
+    --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+    --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+    --radius: 12px;
+  }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; background: #0f1117; color: #e2e8f0; line-height: 1.7; }
-  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 40px 20px; text-align: center; border-bottom: 1px solid #2d3748; }
-  .header h1 { font-size: 2rem; font-weight: 700; color: #63b3ed; letter-spacing: 2px; }
-  .header .date { font-size: 0.95rem; color: #718096; margin-top: 8px; }
-  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px; }
-  .section { background: #1a202c; border-radius: 12px; padding: 24px; margin-bottom: 24px; border: 1px solid #2d3748; }
-  .section-title { font-size: 1.1rem; font-weight: 700; color: #63b3ed; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #2d3748; }
-  .sub-title { font-size: 0.9rem; font-weight: 600; color: #a0aec0; margin: 16px 0 10px; }
-  .news-item { padding: 12px 0; border-bottom: 1px solid #2d374860; }
-  .news-item:last-child { border-bottom: none; }
-  .news-item p { font-size: 0.95rem; color: #cbd5e0; }
-  .news-item .source { font-size: 0.8rem; color: #4299e1; margin-top: 4px; }
-  .news-item .source a { color: #4299e1; text-decoration: none; }
-  .news-item .source a:hover { text-decoration: underline; }
-  .empty { color: #4a5568; font-size: 0.9rem; font-style: italic; }
-  table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-  th { background: #2d3748; color: #a0aec0; font-size: 0.85rem; padding: 10px 14px; text-align: left; }
-  td { padding: 10px 14px; font-size: 0.9rem; border-bottom: 1px solid #2d374860; }
-  tr:last-child td { border-bottom: none; }
-  .up { color: #68d391; font-weight: 600; }
-  .down { color: #fc8181; font-weight: 600; }
-  .snapshot { font-size: 0.8rem; color: #718096; margin-bottom: 12px; }
-  .summary { background: #2d3748; border-radius: 8px; padding: 14px 16px; margin-top: 16px; font-size: 0.9rem; color: #cbd5e0; }
-  .footer { text-align: center; color: #4a5568; font-size: 0.8rem; padding: 30px 20px; }
-  .badge { display: inline-block; background: #2b6cb0; color: #bee3f8; font-size: 0.75rem; padding: 2px 8px; border-radius: 20px; margin-left: 8px; vertical-align: middle; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", sans-serif; background: var(--bg); color: var(--text-primary); line-height: 1.6; }
+
+  /* Header */
+  .header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow); }
+  .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .logo { font-size: 1.1rem; font-weight: 700; color: var(--accent); display: flex; align-items: center; gap: 8px; }
+  .logo-sub { font-size: 0.8rem; color: var(--text-muted); font-weight: 400; }
+  .header-date { font-size: 0.82rem; color: var(--text-muted); }
+
+  /* Tabs */
+  .tabs { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 24px; }
+  .tabs-inner { max-width: 1100px; margin: 0 auto; display: flex; gap: 0; }
+  .tab-btn { padding: 14px 24px; font-size: 0.92rem; font-weight: 500; color: var(--text-secondary); border: none; background: none; cursor: pointer; border-bottom: 2px solid transparent; transition: all .15s; white-space: nowrap; }
+  .tab-btn:hover { color: var(--accent); }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* Container */
+  .container { max-width: 1100px; margin: 0 auto; padding: 28px 24px; }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* ── 日报 Tab ── */
+  .report-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .report-grid { grid-template-columns: 1fr; } }
+
+  .card { background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); padding: 22px 24px; box-shadow: var(--shadow); }
+  .card-title { font-size: 0.92rem; font-weight: 700; color: var(--accent); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+  .card-subtitle { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .5px; margin: 14px 0 8px; }
+  .news-item { padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .news-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .news-text { font-size: 0.9rem; color: var(--text-primary); line-height: 1.6; }
+  .news-source { font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; }
+  .news-source a { color: var(--accent); text-decoration: none; }
+  .news-source a:hover { text-decoration: underline; }
+  .empty-msg { font-size: 0.88rem; color: var(--text-muted); font-style: italic; padding: 6px 0; }
+
+  /* Market table */
+  .market-card { grid-column: 1 / -1; }
+  .snapshot-time { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 14px; }
+  .market-table { width: 100%; border-collapse: collapse; }
+  .market-table th { font-size: 0.78rem; text-transform: uppercase; letter-spacing: .5px; color: var(--text-muted); padding: 8px 14px; text-align: left; border-bottom: 2px solid var(--border); }
+  .market-table td { padding: 10px 14px; font-size: 0.9rem; border-bottom: 1px solid var(--border); }
+  .market-table tr:last-child td { border-bottom: none; }
+  .up-tag { color: var(--up); font-weight: 600; background: var(--up-bg); padding: 2px 8px; border-radius: 20px; font-size: 0.82rem; }
+  .down-tag { color: var(--down); font-weight: 600; background: var(--down-bg); padding: 2px 8px; border-radius: 20px; font-size: 0.82rem; }
+  .summary-box { background: var(--accent-light); border-left: 3px solid var(--accent); padding: 12px 16px; border-radius: 6px; margin-top: 16px; font-size: 0.88rem; color: var(--text-primary); line-height: 1.6; }
+
+  /* ── 宏观 Tab ── */
+  .macro-section-title { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin: 28px 0 16px; display: flex; align-items: center; gap: 8px; }
+  .macro-section-title:first-child { margin-top: 0; }
+  .indicator-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-bottom: 32px; }
+  .ind-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow); cursor: pointer; transition: box-shadow .15s, border-color .15s; }
+  .ind-card:hover { box-shadow: var(--shadow-md); border-color: var(--accent); }
+  .ind-card.selected { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,.12); }
+  .ind-name { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .4px; margin-bottom: 8px; }
+  .ind-value { font-size: 1.6rem; font-weight: 700; color: var(--text-primary); line-height: 1; margin-bottom: 6px; }
+  .ind-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+  .ind-date { font-size: 0.75rem; color: var(--text-muted); }
+  .ind-badge { font-size: 0.75rem; font-weight: 600; padding: 2px 7px; border-radius: 20px; display: flex; align-items: center; gap: 3px; }
+  .ind-badge.up { color: var(--up); background: var(--up-bg); }
+  .ind-badge.down { color: var(--down); background: var(--down-bg); }
+  .ind-badge.neutral { color: var(--neutral); background: #fffbeb; }
+  .ind-prev { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
+
+  /* Chart section */
+  .chart-section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); margin-top: 8px; }
+  .chart-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+  .chart-title { font-size: 0.95rem; font-weight: 700; color: var(--text-primary); }
+  .chart-subtitle { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+  .chart-wrap { position: relative; height: 240px; }
+
+  .footer { text-align: center; font-size: 0.78rem; color: var(--text-muted); padding: 32px 20px; }
+  .footer a { color: var(--accent); text-decoration: none; }
 </style>
 </head>
 <body>
+
 <div class="header">
-  <h1>📊 Crypto 行业日报</h1>
-  <div class="date" id="report-date">加载中...</div>
+  <div class="header-inner">
+    <div class="logo">📊 Crypto Daily <span class="logo-sub">· 行业日报</span></div>
+    <div class="header-date" id="header-date">—</div>
+  </div>
 </div>
-<div class="container" id="report-content">
-  <div class="section"><p class="empty">日报内容加载中，请稍候...</p></div>
+
+<div class="tabs">
+  <div class="tabs-inner">
+    <button class="tab-btn active" onclick="switchTab('report', this)">📰 每日日报</button>
+    <button class="tab-btn" onclick="switchTab('macro', this)">🇺🇸 美国宏观数据</button>
+  </div>
 </div>
-<div class="footer" id="report-footer"></div>
+
+<div class="container">
+
+  <!-- ── Tab 1: 日报 ── -->
+  <div id="tab-report" class="tab-panel active">
+    <div class="report-grid" id="report-content">
+      <div class="card"><p class="empty-msg">日报加载中...</p></div>
+    </div>
+  </div>
+
+  <!-- ── Tab 2: 宏观数据 ── -->
+  <div id="tab-macro" class="tab-panel">
+    <div class="macro-section-title">📌 关键经济指标（最新值）</div>
+    <div class="indicator-grid" id="indicator-grid">
+      <div class="ind-card"><p class="empty-msg">数据加载中...</p></div>
+    </div>
+    <div class="chart-section" id="chart-section" style="display:none">
+      <div class="chart-header">
+        <div>
+          <div class="chart-title" id="chart-title">—</div>
+          <div class="chart-subtitle">近12期历史走势</div>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="macro-chart"></canvas></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer" id="footer">由 OpenClaw 自动生成 · <a href="https://github.com/Ivanhandsome777/crypto-daily" target="_blank">GitHub</a></div>
+
 <script>
-  fetch('report.json?t=' + Date.now())
-    .then(r => r.json())
-    .then(d => renderReport(d))
-    .catch(() => {
-      document.getElementById('report-content').innerHTML = '<div class="section"><p class="empty">暂无数据，请稍后刷新。</p></div>';
-    });
+let macroChart = null;
 
-  function renderReport(d) {
-    document.getElementById('report-date').textContent = d.date + ' · 每日自动更新';
-    document.title = 'Crypto 行业日报 · ' + d.date;
+/* ─ Tab 切换 ─ */
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  btn.classList.add('active');
+}
 
-    let html = '';
+/* ─ 加载日报 ─ */
+fetch('report.json?t=' + Date.now())
+  .then(r => r.json())
+  .then(renderReport)
+  .catch(() => {
+    document.getElementById('report-content').innerHTML = '<div class="card"><p class="empty-msg">暂无数据，请稍后刷新。</p></div>';
+  });
 
-    // 板块一
-    html += `<div class="section">
-      <div class="section-title">📌 板块一：宏观经济 &amp; 监管政策</div>
-      <div class="sub-title">【宏观经济】</div>
-      ${renderNews(d.macro)}
-      <div class="sub-title">【监管政策】</div>
-      ${renderNews(d.regulation)}
-    </div>`;
+function renderReport(d) {
+  document.getElementById('header-date').textContent = d.date;
+  document.title = 'Crypto 行业日报 · ' + d.date;
 
-    // 板块二
-    html += `<div class="section">
-      <div class="section-title">🚀 板块二：产品创新</div>
-      ${renderNews(d.product)}
-    </div>`;
+  const tag = v => v.startsWith('+')
+    ? `<span class="up-tag">▲ ${v}</span>`
+    : `<span class="down-tag">▼ ${v}</span>`;
 
-    // 板块三
-    html += `<div class="section">
-      <div class="section-title">🏦 板块三：传统金融动向</div>
-      ${renderNews(d.tradfi)}
-    </div>`;
-
-    // 板块四
-    html += `<div class="section">
-      <div class="section-title">📊 板块四：主流市场行情</div>
-      <div class="snapshot">⏱ 价格快照时间：${d.snapshot_time}</div>
-      <table>
-        <tr><th>资产</th><th>价格</th><th>24h 涨跌</th></tr>
-        ${d.market.map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td><td class="${r[2].startsWith('+') ? 'up' : 'down'}">${r[2]}</td></tr>`).join('')}
-      </table>
-      ${d.summary ? `<div class="summary">📈 ${d.summary}</div>` : ''}
-    </div>`;
-
-    document.getElementById('report-content').innerHTML = html;
-    document.getElementById('report-footer').textContent = '由 OpenClaw 自动生成 · ' + d.generated_at;
-  }
-
-  function renderNews(items) {
-    if (!items || items.length === 0) return '<p class="empty">今日暂无重要动态</p>';
+  const newsBlock = (items) => {
+    if (!items || !items.length) return '<p class="empty-msg">今日暂无重要动态</p>';
     return items.map(n => `
       <div class="news-item">
-        <p>${n.text}</p>
-        ${n.source ? `<div class="source">来源：<a href="${n.url}" target="_blank">${n.source}</a></div>` : ''}
+        <div class="news-text">${n.text}</div>
+        ${n.source ? `<div class="news-source">来源：<a href="${n.url}" target="_blank">${n.source}</a></div>` : ''}
       </div>`).join('');
-  }
+  };
+
+  let html = `
+    <div class="card">
+      <div class="card-title">📌 宏观经济 &amp; 监管政策</div>
+      <div class="card-subtitle">宏观经济</div>${newsBlock(d.macro)}
+      <div class="card-subtitle">监管政策</div>${newsBlock(d.regulation)}
+    </div>
+    <div class="card">
+      <div class="card-title">🚀 产品创新</div>
+      ${newsBlock(d.product)}
+    </div>
+    <div class="card">
+      <div class="card-title">🏦 传统金融动向</div>
+      ${newsBlock(d.tradfi)}
+    </div>
+    <div class="card market-card">
+      <div class="card-title">📊 主流市场行情</div>
+      <div class="snapshot-time">⏱ 价格快照：${d.snapshot_time}</div>
+      <table class="market-table">
+        <tr><th>资产</th><th>价格</th><th>24h 涨跌</th></tr>
+        ${(d.market||[]).map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${tag(r[2])}</td></tr>`).join('')}
+      </table>
+      ${d.summary ? `<div class="summary-box">📈 ${d.summary}</div>` : ''}
+    </div>`;
+
+  document.getElementById('report-content').innerHTML = html;
+  document.getElementById('footer').innerHTML = `由 OpenClaw 自动生成 · ${d.generated_at} · <a href="https://github.com/Ivanhandsome777/crypto-daily" target="_blank">GitHub</a>`;
+}
+
+/* ─ 加载宏观数据 ─ */
+fetch('macro.json?t=' + Date.now())
+  .then(r => r.json())
+  .then(renderMacro)
+  .catch(() => {
+    document.getElementById('indicator-grid').innerHTML = '<p class="empty-msg">宏观数据暂未就绪，将在下次更新后显示。</p>';
+  });
+
+function renderMacro(d) {
+  const grid = document.getElementById('indicator-grid');
+  grid.innerHTML = (d.indicators || []).map((ind, i) => {
+    const trendClass = ind.trend === 'up' ? 'up' : ind.trend === 'down' ? 'down' : 'neutral';
+    const trendIcon = ind.trend === 'up' ? '▲' : ind.trend === 'down' ? '▼' : '—';
+    const diff = ind.diff ? `${ind.diff > 0 ? '+' : ''}${ind.diff}` : trendIcon;
+    return `
+      <div class="ind-card" onclick="showChart(${i})" id="ind-${i}">
+        <div class="ind-name">${ind.name}</div>
+        <div class="ind-value">${ind.value}</div>
+        <div class="ind-meta">
+          <div class="ind-date">${ind.release_date}</div>
+          <div class="ind-badge ${trendClass}">${trendIcon} ${diff}</div>
+        </div>
+        <div class="ind-prev">上期：${ind.previous}</div>
+      </div>`;
+  }).join('');
+
+  window._macroData = d;
+}
+
+function showChart(idx) {
+  const d = window._macroData;
+  if (!d) return;
+  const ind = d.indicators[idx];
+
+  // 高亮选中
+  document.querySelectorAll('.ind-card').forEach(c => c.classList.remove('selected'));
+  document.getElementById('ind-' + idx).classList.add('selected');
+
+  const section = document.getElementById('chart-section');
+  section.style.display = 'block';
+  document.getElementById('chart-title').textContent = ind.name + '  ' + ind.value;
+
+  const labels = (ind.history || []).map(h => h.period);
+  const values = (ind.history || []).map(h => h.value);
+  const color = ind.trend === 'up' ? '#10b981' : ind.trend === 'down' ? '#ef4444' : '#2563eb';
+
+  if (macroChart) macroChart.destroy();
+  const ctx = document.getElementById('macro-chart').getContext('2d');
+  macroChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        label: ind.name,
+        data: values,
+        borderColor: color,
+        backgroundColor: color + '18',
+        borderWidth: 2.5,
+        pointRadius: 4,
+        pointHoverRadius: 6,
+        pointBackgroundColor: color,
+        fill: true,
+        tension: 0.35,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#1e293b',
+          titleColor: '#94a3b8',
+          bodyColor: '#f8fafc',
+          padding: 10,
+          callbacks: { label: ctx => ` ${ctx.raw}${ind.unit || ''}` }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { color: '#94a3b8', font: { size: 11 } } },
+        y: {
+          grid: { color: '#f1f5f9' },
+          ticks: { color: '#94a3b8', font: { size: 11 }, callback: v => v + (ind.unit || '') }
+        }
+      }
+    }
+  });
+
+  section.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
 </script>
 </body>
 </html>
