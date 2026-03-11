@@ -3,35 +3,119 @@
   "snapshot_time": "2026-03-11 10:29 GMT+8",
   "generated_at": "2026-03-11 10:29 GMT+8",
   "macro": [
-    {"text": "特朗普再度强化对伊朗威胁言论，地缘风险升温推动BTC小幅上涨，但美联储降息预期几近归零，宏观压力仍存。", "source": "Decrypt", "url": "https://decrypt.co/360556/bitcoin-rises-trump-iran-threats-fed-rate-cut-chances-near-zero"},
-    {"text": "知名比特币多头 Arthur Hayes 表示目前不会押注BTC，认为美联储货币政策立场未明朗前市场方向不确定。", "source": "CoinTelegraph", "url": "https://cointelegraph.com/news/bitcoiner-arthur-hayes-hesitant-buying-btc-federal-reserve-monetary-stance"}
+    {
+      "text": "特朗普再度强化对伊朗威胁言论，地缘风险升温推动BTC小幅上涨，但美联储降息预期几近归零，宏观压力仍存。",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/360556/bitcoin-rises-trump-iran-threats-fed-rate-cut-chances-near-zero"
+    },
+    {
+      "text": "知名比特币多头 Arthur Hayes 表示目前不会押注BTC，认为美联储货币政策立场未明朗前市场方向不确定。",
+      "source": "CoinTelegraph",
+      "url": "https://cointelegraph.com/news/bitcoiner-arthur-hayes-hesitant-buying-btc-federal-reserve-monetary-stance"
+    }
   ],
   "regulation": [
-    {"text": "TD Cowen 分析师指出，美国国会正逐步接近永久禁止美联储发行 CBDC，立法进程明显提速。", "source": "The Block", "url": "https://www.theblock.co/post/393102/td-cowen-congress-likely-permanently-banning-fed-cbdc"},
-    {"text": "SEC 主席呼吁美国各金融监管机构之间建立「协调统一的监管框架」，为加密行业联邦监管整合释放积极信号。", "source": "CoinTelegraph", "url": "https://cointelegraph.com/news/sec-chair-oversight-us-financial-agencies"},
-    {"text": "美国银行家协会（ABA）调查显示，消费者支持对稳定币收益率设置与银行风险挂钩的上限限制。", "source": "The Block", "url": "https://www.theblock.co/post/393082/american-bankers-association-survey-consumers-support-stablecoin-yield-restrictions-financial-risk"}
+    {
+      "text": "TD Cowen 分析师指出，美国国会正逐步接近永久禁止美联储发行 CBDC，立法进程明显提速。",
+      "source": "The Block",
+      "url": "https://www.theblock.co/post/393102/td-cowen-congress-likely-permanently-banning-fed-cbdc"
+    },
+    {
+      "text": "SEC 主席呼吁美国各金融监管机构之间建立「协调统一的监管框架」，为加密行业联邦监管整合释放积极信号。",
+      "source": "CoinTelegraph",
+      "url": "https://cointelegraph.com/news/sec-chair-oversight-us-financial-agencies"
+    },
+    {
+      "text": "美国银行家协会（ABA）调查显示，消费者支持对稳定币收益率设置与银行风险挂钩的上限限制。",
+      "source": "The Block",
+      "url": "https://www.theblock.co/post/393082/american-bankers-association-survey-consumers-support-stablecoin-yield-restrictions-financial-risk"
+    }
   ],
   "product": [
-    {"text": "Aave 预言机发生故障，导致约2600万美元 wstETH 遭到不公平清算，团队已介入调查并讨论补偿方案。", "source": "The Block", "url": "https://www.theblock.co/post/393121/aave-oracle-glitch-wsteth"},
-    {"text": "法国兴业银行旗下 SG-FORGE 在 Stellar 网络上线符合 MiCA 监管要求的欧元稳定币 EURCV，传统银行加速布局链上稳定币。", "source": "CoinTelegraph", "url": "https://cointelegraph.com/news/socgen-forge-deploys-mica-compliant-euro-stablecoin-eurcv-on-stellar-network"},
-    {"text": "Hyperliquid 完成保证金机制升级，支持更灵活的杠杆策略，HYPE 代币价格当日上涨。", "source": "Decrypt", "url": "https://decrypt.co/360560/hyperliquid-jumps-on-margin-upgrade-oil-trading-frenzy"},
-    {"text": "Jito Foundation 收购已关闭的 SolanaFloor 平台，计划重启以恢复 Solana 生态内容报道。", "source": "CoinTelegraph", "url": "https://cointelegraph.com/news/jito-foundation-acquires-solanafloor-to-revive-solana-ecosystem-journalism"}
+    {
+      "text": "Aave 预言机发生故障，导致约2600万美元 wstETH 遭到不公平清算，团队已介入调查并讨论补偿方案。",
+      "source": "The Block",
+      "url": "https://www.theblock.co/post/393121/aave-oracle-glitch-wsteth"
+    },
+    {
+      "text": "法国兴业银行旗下 SG-FORGE 在 Stellar 网络上线符合 MiCA 监管要求的欧元稳定币 EURCV，传统银行加速布局链上稳定币。",
+      "source": "CoinTelegraph",
+      "url": "https://cointelegraph.com/news/socgen-forge-deploys-mica-compliant-euro-stablecoin-eurcv-on-stellar-network"
+    },
+    {
+      "text": "Hyperliquid 完成保证金机制升级，支持更灵活的杠杆策略，HYPE 代币价格当日上涨。",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/360560/hyperliquid-jumps-on-margin-upgrade-oil-trading-frenzy"
+    },
+    {
+      "text": "Jito Foundation 收购已关闭的 SolanaFloor 平台，计划重启以恢复 Solana 生态内容报道。",
+      "source": "CoinTelegraph",
+      "url": "https://cointelegraph.com/news/jito-foundation-acquires-solanafloor-to-revive-solana-ecosystem-journalism"
+    }
   ],
   "tradfi": [
-    {"text": "高盛（Goldman Sachs）跻身 XRP 现货 ETF 最大持仓机构，分析师将这批机构投资者称为 XRP「超级粉丝」。", "source": "The Block", "url": "https://www.theblock.co/post/393044/goldman-sachs-top-xrp-etf-holder-wave-super-fans-analysts"},
-    {"text": "英国保险巨头 Aviva Investors 披露计划在 XRP Ledger 上将旗下基金代币化，并与 RippleX 达成战略合作。", "source": "The Block", "url": "https://www.theblock.co/post/393088/how-aviva-investors-plans-to-tokenize-its-funds-on-xrp-ledger-with-ripplex-svp"},
-    {"text": "Ripple 计划最快今年4月通过收购获得澳大利亚金融服务牌照，加速亚太区合规布局。", "source": "CoinTelegraph", "url": "https://cointelegraph.com/news/ripple-eyes-australian-financial-license-through-acquisition"},
-    {"text": "挖矿机厂商 Canaan 逆势增持比特币储备，而其他矿商普遍选择抛售，凸显机构对BTC长期价值的分歧。", "source": "CoinTelegraph", "url": "https://cointelegraph.com/news/canaan-bitcoin-reserves-rise-miners-selling-btc"}
+    {
+      "text": "高盛（Goldman Sachs）跻身 XRP 现货 ETF 最大持仓机构，分析师将这批机构投资者称为 XRP「超级粉丝」。",
+      "source": "The Block",
+      "url": "https://www.theblock.co/post/393044/goldman-sachs-top-xrp-etf-holder-wave-super-fans-analysts"
+    },
+    {
+      "text": "英国保险巨头 Aviva Investors 披露计划在 XRP Ledger 上将旗下基金代币化，并与 RippleX 达成战略合作。",
+      "source": "The Block",
+      "url": "https://www.theblock.co/post/393088/how-aviva-investors-plans-to-tokenize-its-funds-on-xrp-ledger-with-ripplex-svp"
+    },
+    {
+      "text": "Ripple 计划最快今年4月通过收购获得澳大利亚金融服务牌照，加速亚太区合规布局。",
+      "source": "CoinTelegraph",
+      "url": "https://cointelegraph.com/news/ripple-eyes-australian-financial-license-through-acquisition"
+    },
+    {
+      "text": "挖矿机厂商 Canaan 逆势增持比特币储备，而其他矿商普遍选择抛售，凸显机构对BTC长期价值的分歧。",
+      "source": "CoinTelegraph",
+      "url": "https://cointelegraph.com/news/canaan-bitcoin-reserves-rise-miners-selling-btc"
+    }
   ],
   "market": [
-    ["BTC", "$69,972", "+0.85%"],
-    ["标普500", "6,781", "+0.62%"],
-    ["纳斯达克", "22,697", "+1.38%"],
-    ["道琼斯", "47,707", "+0.43%"],
-    ["美元指数 DXY", "98.83", "-0.35%"],
-    ["黄金", "$5,212", "+2.37%"],
-    ["白银", "$88.55", "+5.37%"],
-    ["WTI原油", "$83.64", "-11.74%"]
+    [
+      "BTC",
+      "$69,972",
+      "+0.85%"
+    ],
+    [
+      "标普500",
+      "6,781",
+      "+0.62%"
+    ],
+    [
+      "纳斯达克",
+      "22,697",
+      "+1.38%"
+    ],
+    [
+      "道琼斯",
+      "47,707",
+      "+0.43%"
+    ],
+    [
+      "美元指数 DXY",
+      "98.83",
+      "-0.35%"
+    ],
+    [
+      "黄金",
+      "$5,212",
+      "+2.37%"
+    ],
+    [
+      "白银",
+      "$88.55",
+      "+5.37%"
+    ],
+    [
+      "WTI原油",
+      "$83.64",
+      "-11.74%"
+    ]
   ],
   "summary": "BTC维持7万美元附近震荡，多空分歧加大。美股延续涨势，纳指领涨1.4%。贵金属持续走强，黄金+2.4%、白银+5.4%。原油继续重挫（-11.7%），伊朗地缘风险预期降温叠加供应预期变化，为近期最大异动资产。"
 }
