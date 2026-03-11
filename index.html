@@ -181,7 +181,9 @@ function renderReport(d) {
     return items.map(n => `
       <div class="news-item">
         <div class="news-text">${n.text}</div>
-        ${n.source ? `<div class="news-source">来源：<a href="${n.url}" target="_blank">${n.source}</a></div>` : ''}
+        <div class="news-source">
+          ${n.date ? `<span style="color:var(--text-muted)">🕐 ${n.date}</span>${n.source ? ' · ' : ''}` : ''}${n.source ? `来源：<a href="${n.url}" target="_blank">${n.source}</a>` : ''}
+        </div>
       </div>`).join('');
   };
 
