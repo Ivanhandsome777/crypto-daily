@@ -1,148 +1,121 @@
 {
-  "date": "2026-03-11",
-  "snapshot_time": "2026-03-11 10:29 GMT+8",
-  "generated_at": "2026-03-11 10:29 GMT+8",
+  "date": "2026-03-16",
+  "snapshot_time": "2026-03-16 08:01 GMT+8",
   "macro": [
     {
-      "text": "特朗普再度强化对伊朗威胁言论，地缘风险升温推动BTC小幅上涨，但美联储降息预期几近归零，宏观压力仍存。",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/360556/bitcoin-rises-trump-iran-threats-fed-rate-cut-chances-near-zero",
-      "date": "2026-03-11"
-    },
-    {
-      "text": "知名比特币多头 Arthur Hayes 表示目前不会押注BTC，认为美联储货币政策立场未明朗前市场方向不确定。",
+      "text": "伊朗地缘冲击下比特币与黄金走势出现明显分化——分析指出，本轮冲击中 BTC 展现出比黄金更强的风险资产弹性，短期资金流向呈现避险与投机双重特征。",
+      "url": "https://cointelegraph.com/news/how-bitcoin-and-gold-reacted-differently-to-the-iran-war-shock",
       "source": "CoinTelegraph",
-      "url": "https://cointelegraph.com/news/bitcoiner-arthur-hayes-hesitant-buying-btc-federal-reserve-monetary-stance",
-      "date": "2026-03-11"
+      "date": "2026-03-15"
     }
   ],
   "regulation": [
     {
-      "text": "TD Cowen 分析师指出，美国国会正逐步接近永久禁止美联储发行 CBDC，立法进程明显提速。",
-      "source": "The Block",
-      "url": "https://www.theblock.co/post/393102/td-cowen-congress-likely-permanently-banning-fed-cbdc",
-      "date": "2026-03-11"
-    },
-    {
-      "text": "SEC 主席呼吁美国各金融监管机构之间建立「协调统一的监管框架」，为加密行业联邦监管整合释放积极信号。",
+      "text": "CLARITY Act 或将加密监管权交予中心化机构——Gnosis 高管警告称，该法案可能削弱去中心化协议的竞争力，向受监管的中心化平台倾斜。",
+      "url": "https://cointelegraph.com/news/clarity-act-hand-crypto-centralized-player",
       "source": "CoinTelegraph",
-      "url": "https://cointelegraph.com/news/sec-chair-oversight-us-financial-agencies",
-      "date": "2026-03-11"
+      "date": "2026-03-15"
     },
     {
-      "text": "美国银行家协会（ABA）调查显示，消费者支持对稳定币收益率设置与银行风险挂钩的上限限制。",
-      "source": "The Block",
-      "url": "https://www.theblock.co/post/393082/american-bankers-association-survey-consumers-support-stablecoin-yield-restrictions-financial-risk",
-      "date": "2026-03-10"
+      "text": "CLARITY Act 2026 若未在四月前通过，法案获批概率极低——Galaxy Digital 高管表示，国会日程表留给该法案的窗口期已非常有限。",
+      "url": "https://cointelegraph.com/news/clarity-act-crypto-united-states-congress-galaxy-digital",
+      "source": "CoinTelegraph",
+      "date": "2026-03-15"
+    },
+    {
+      "text": "佛罗里达州稳定币法案被指暗含监控工具——批评者指出该法案部分条款与 DeSantis 已明令禁止的 CBDC 监控逻辑高度相似。",
+      "url": "https://decrypt.co/361074/florida-stablecoin-bill-mirrors-big-brother-tools-ron-desantis-cdbc-ban",
+      "source": "Decrypt",
+      "date": "2026-03-15"
+    },
+    {
+      "text": "稳定币监管不确定性对银行冲击或大于加密企业——专家认为，缺乏清晰框架将使传统银行在稳定币业务上处于被动，原生加密企业反而适应更快。",
+      "url": "https://cointelegraph.com/news/stablecoin-uncertainty-could-hurt-banks-more-than-crypto-firms-expert",
+      "source": "CoinTelegraph",
+      "date": "2026-03-15"
+    },
+    {
+      "text": "阿根廷总统米莱与 Libra 代币推广 500 万美元协议草案曝光——法证分析在涉案人员手机中发现该文件，或成为调查关键证据。",
+      "url": "https://cointelegraph.com/news/milei-libra-promotion-5m-draft-deal-found-novelli-phone",
+      "source": "CoinTelegraph",
+      "date": "2026-03-15"
     }
   ],
   "product": [
     {
-      "text": "Aave 预言机发生故障，导致约2600万美元 wstETH 遭到不公平清算，团队已介入调查并讨论补偿方案。",
-      "source": "The Block",
-      "url": "https://www.theblock.co/post/393121/aave-oracle-glitch-wsteth",
-      "date": "2026-03-11"
-    },
-    {
-      "text": "法国兴业银行旗下 SG-FORGE 在 Stellar 网络上线符合 MiCA 监管要求的欧元稳定币 EURCV，传统银行加速布局链上稳定币。",
+      "text": "Vitalik Buterin 提出以太坊节点软件简化方案——旨在降低个人运行全节点的技术门槛，提升网络去中心化程度。",
+      "url": "https://cointelegraph.com/news/vitalik-buterin-simplify-ethereum-node",
       "source": "CoinTelegraph",
-      "url": "https://cointelegraph.com/news/socgen-forge-deploys-mica-compliant-euro-stablecoin-eurcv-on-stellar-network",
-      "date": "2026-03-11"
+      "date": "2026-03-15"
     },
     {
-      "text": "Hyperliquid 完成保证金机制升级，支持更灵活的杠杆策略，HYPE 代币价格当日上涨。",
+      "text": "Ledger 硬件钱包联合 MoonPay 推出 AI Agent 资金管控方案——用户可通过硬件钱包设置 AI Agent 的加密资产消费上限，为自主型 AI 代理提供链上资金隔离与授权机制。",
+      "url": "https://decrypt.co/361136/control-ai-agent-crypto-spending-ledger-hardware-wallets-moonpay",
       "source": "Decrypt",
-      "url": "https://decrypt.co/360560/hyperliquid-jumps-on-margin-upgrade-oil-trading-frenzy",
-      "date": "2026-03-11"
+      "date": "2026-03-15"
     },
     {
-      "text": "Jito Foundation 收购已关闭的 SolanaFloor 平台，计划重启以恢复 Solana 生态内容报道。",
-      "source": "CoinTelegraph",
-      "url": "https://cointelegraph.com/news/jito-foundation-acquires-solanafloor-to-revive-solana-ecosystem-journalism",
-      "date": "2026-03-11"
-    }
-  ],
-  "competitor": [
-    {
-      "text": "Kraken 与 Nasdaq 达成代币化战略合作，共同推进股票代币化结算基础设施建设，标志着头部加密交易所与传统交易所巨头的首次深度战略绑定。",
+      "text": "Aave 与 CoW Swap 就 5000 万美元 DeFi 交换事故发布各自事后报告——双方对故障根因和责任归属存在分歧，引发社区对跨协议安全边界的广泛讨论。",
+      "url": "https://www.theblock.co/post/393621/aave-and-cow-swap-publish-dueling-post-mortems-after-50-million-defi-swap-disaster",
       "source": "The Block",
-      "url": "https://www.theblock.co/post/392896/the-daily-bitcoins-mined-supply-tops-20-million-btc-nasdaq-partners-with-kraken-on-tokenization-initiative-and-more",
-      "date": "2026-03-10"
+      "date": "2026-03-15"
     },
     {
-      "text": "Coinbase 面向欧洲交易者正式上线 BTC 和 ETH 期货产品，获得欧洲衍生品交易合规资质，完成欧洲市场布局。",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/360420/coinbase-debuts-crypto-futures-european-traders-bitcoin-ethereum",
-      "date": "2026-03-10"
+      "text": "Venus Protocol 遭供给上限攻击，损失约 370 万美元坏账——攻击者操控 Thena 的 THE 代币价格，利用协议定价机制漏洞完成套利。",
+      "url": "https://cointelegraph.com/news/venus-protocol-3-7-million-supply-cap-attack",
+      "source": "CoinTelegraph",
+      "date": "2026-03-15"
     }
   ],
   "tradfi": [
     {
-      "text": "高盛（Goldman Sachs）跻身 XRP 现货 ETF 最大持仓机构，分析师将这批机构投资者称为 XRP「超级粉丝」。",
-      "source": "The Block",
-      "url": "https://www.theblock.co/post/393044/goldman-sachs-top-xrp-etf-holder-wave-super-fans-analysts",
-      "date": "2026-03-10"
-    },
-    {
-      "text": "英国保险巨头 Aviva Investors 披露计划在 XRP Ledger 上将旗下基金代币化，并与 RippleX 达成战略合作。",
-      "source": "The Block",
-      "url": "https://www.theblock.co/post/393088/how-aviva-investors-plans-to-tokenize-its-funds-on-xrp-ledger-with-ripplex-svp",
-      "date": "2026-03-10"
-    },
-    {
-      "text": "Ripple 计划最快今年4月通过收购获得澳大利亚金融服务牌照，加速亚太区合规布局。",
+      "text": "以太坊基金会以场外交易方式向 BitMine 出售价值 1020 万美元的 ETH——这是基金会近期少见的大规模 OTC 交易，市场关注其后续资金用途。",
+      "url": "https://cointelegraph.com/news/ethereum-foundation-sells-eth-to-bitmine-otc-deal",
       "source": "CoinTelegraph",
-      "url": "https://cointelegraph.com/news/ripple-eyes-australian-financial-license-through-acquisition",
-      "date": "2026-03-11"
-    },
-    {
-      "text": "挖矿机厂商 Canaan 逆势增持比特币储备，而其他矿商普遍选择抛售，凸显机构对BTC长期价值的分歧。",
-      "source": "CoinTelegraph",
-      "url": "https://cointelegraph.com/news/canaan-bitcoin-reserves-rise-miners-selling-btc",
-      "date": "2026-03-10"
+      "date": "2026-03-15"
     }
   ],
   "market": [
     [
       "BTC",
-      "$69,972",
-      "+0.85%"
+      "$72,804",
+      "+2.36%"
     ],
     [
       "标普500",
-      "6,781",
-      "+0.62%"
+      "6,632",
+      "-2.12%"
     ],
     [
       "纳斯达克",
-      "22,697",
-      "+1.38%"
+      "22,105",
+      "-2.69%"
     ],
     [
       "道琼斯",
-      "47,707",
-      "+0.43%"
+      "46,558",
+      "-1.81%"
     ],
     [
-      "美元指数 DXY",
-      "98.83",
-      "-0.35%"
+      "美元指数DXY",
+      "100.50",
+      "+0.13%"
     ],
     [
       "黄金",
-      "$5,212",
-      "+2.37%"
+      "$4,983",
+      "-1.38%"
     ],
     [
       "白银",
-      "$88.55",
-      "+5.37%"
+      "$79.81",
+      "-1.36%"
     ],
     [
       "WTI原油",
-      "$83.64",
-      "-11.74%"
+      "$98.79",
+      "+0.08%"
     ]
   ],
-  "summary": "BTC维持7万美元附近震荡，多空分歧加大。美股延续涨势，纳指领涨1.4%。贵金属持续走强，黄金+2.4%、白银+5.4%。原油继续重挫（-11.7%），伊朗地缘风险预期降温叠加供应预期变化，为近期最大异动资产。"
+  "summary": "地缘风险驱动美股普跌；BTC 逆势独涨，鲸鱼重返积累区间"
 }
