@@ -1,121 +1,127 @@
 {
-  "date": "2026-03-16",
-  "snapshot_time": "2026-03-16 08:01 GMT+8",
+  "date": "2026-03-20",
+  "snapshot_time": "2026-03-20 11:40 GMT+8",
   "macro": [
     {
-      "text": "伊朗地缘冲击下比特币与黄金走势出现明显分化——分析指出，本轮冲击中 BTC 展现出比黄金更强的风险资产弹性，短期资金流向呈现避险与投机双重特征。",
-      "url": "https://cointelegraph.com/news/how-bitcoin-and-gold-reacted-differently-to-the-iran-war-shock",
-      "source": "CoinTelegraph",
-      "date": "2026-03-15"
+      "text": "季度四重到期日（Quadruple Witching）今日到来，市场预计比特币及主要资产将出现剧烈波动，分析师建议投资者保持观望、保留充裕现金仓位。",
+      "url": "https://www.coindesk.com/markets/2026/03/10/quadruple-witching-arrives-tomorrow-as-markets-brace-for-potential-bitcoin-v",
+      "source": "CoinDesk",
+      "date": "2026-03-19"
+    },
+    {
+      "text": "中东紧张局势持续升温，伊朗冲突导致油价大幅波动，黄金与大宗商品承压回落，全球股市普跌，风险资产遭到抛售。",
+      "url": "https://www.coindesk.com/markets/2026/03/19/bitcoin-holds-usd69-000-as-gold-tumbles-oil-spikes-but-analyst-says-stay-on-",
+      "source": "CoinDesk",
+      "date": "2026-03-19"
+    },
+    {
+      "text": "欧洲央行（ECB）启动招募程序，寻求技术专家协助将数字欧元整合进ATM机及银行卡支付终端，为数字欧元正式发行提前布局。",
+      "url": "https://www.coindesk.com/policy/2026/03/19/ecb-seeks-experts-to-help-integrate-digital-euro-into-atms-card-payment-termi",
+      "source": "CoinDesk",
+      "date": "2026-03-19"
     }
   ],
   "regulation": [
     {
-      "text": "CLARITY Act 或将加密监管权交予中心化机构——Gnosis 高管警告称，该法案可能削弱去中心化协议的竞争力，向受监管的中心化平台倾斜。",
-      "url": "https://cointelegraph.com/news/clarity-act-hand-crypto-centralized-player",
-      "source": "CoinTelegraph",
-      "date": "2026-03-15"
+      "text": "《加密货币清晰法案》（Crypto Clarity Act）正逐步推进参议院听证程序，白宫据悉正在审阅最新立法草案，银行界谈判中要求获得其他无关条款的让步。",
+      "url": "https://www.coindesk.com/policy/2026/03/19/crypto-clarity-act-inches-toward-senate-hearing-as-lawmakers-weigh-legislative-trades",
+      "source": "CoinDesk",
+      "date": "2026-03-19"
     },
     {
-      "text": "CLARITY Act 2026 若未在四月前通过，法案获批概率极低——Galaxy Digital 高管表示，国会日程表留给该法案的窗口期已非常有限。",
-      "url": "https://cointelegraph.com/news/clarity-act-crypto-united-states-congress-galaxy-digital",
+      "text": "美国SEC主席Atkins及委员Peirce、Uyeda联合发文，表示SEC正从此前的监管策略转型，将为加密市场提供更清晰的政策指引，但强调这只是"开始而非终点"。",
+      "url": "https://cointelegraph.com/news/sec-interpretation-crypto-laws-paul-atkins",
       "source": "CoinTelegraph",
-      "date": "2026-03-15"
+      "date": "2026-03-19"
     },
     {
-      "text": "佛罗里达州稳定币法案被指暗含监控工具——批评者指出该法案部分条款与 DeSantis 已明令禁止的 CBDC 监控逻辑高度相似。",
-      "url": "https://decrypt.co/361074/florida-stablecoin-bill-mirrors-big-brother-tools-ron-desantis-cdbc-ban",
-      "source": "Decrypt",
-      "date": "2026-03-15"
+      "text": "美国第九巡回上诉法院裁定，内华达州可对预测市场平台Kalshi实施临时禁令，为各州监管预测市场开辟先例。",
+      "url": "https://www.coindesk.com/policy/2026/03/19/appeals-court-clears-way-for-nevada-to-temporarily-ban-prediction-market-kalshi",
+      "source": "CoinDesk",
+      "date": "2026-03-19"
     },
     {
-      "text": "稳定币监管不确定性对银行冲击或大于加密企业——专家认为，缺乏清晰框架将使传统银行在稳定币业务上处于被动，原生加密企业反而适应更快。",
-      "url": "https://cointelegraph.com/news/stablecoin-uncertainty-could-hurt-banks-more-than-crypto-firms-expert",
+      "text": "比特币政策研究所（BPI）警告肯塔基州加密法案中存在"后门"条款，可能强制要求硬件钱包留有密钥访问渠道，引发隐私与安全担忧。",
+      "url": "https://cointelegraph.com/news/bpi-backdoor-hardware-wallets-kentucky-crypto-bill",
       "source": "CoinTelegraph",
-      "date": "2026-03-15"
+      "date": "2026-03-19"
     },
     {
-      "text": "阿根廷总统米莱与 Libra 代币推广 500 万美元协议草案曝光——法证分析在涉案人员手机中发现该文件，或成为调查关键证据。",
-      "url": "https://cointelegraph.com/news/milei-libra-promotion-5m-draft-deal-found-novelli-phone",
-      "source": "CoinTelegraph",
-      "date": "2026-03-15"
+      "text": "Coinbase面临国会拟议法规的重大威胁，相关规则可能禁止稳定币收益，但分析师指出平台或可借助"奖励"条款漏洞保护USDC收益业务。",
+      "url": "https://www.coindesk.com/policy/2026/03/19/coinbase-faces-a-multibillion-dollar-threat-from-d-c-but-a-rewards-loophole-c",
+      "source": "CoinDesk",
+      "date": "2026-03-19"
     }
   ],
   "product": [
     {
-      "text": "Vitalik Buterin 提出以太坊节点软件简化方案——旨在降低个人运行全节点的技术门槛，提升网络去中心化程度。",
-      "url": "https://cointelegraph.com/news/vitalik-buterin-simplify-ethereum-node",
+      "text": "OpNet在比特币主网上线原生智能合约功能，支持生息DeFi应用，正面挑战比特币长期以来缺乏可编程性的核心局限。",
+      "url": "https://www.coindesk.com/markets/2026/03/19/bitcoin-s-biggest-defi-drawback-under-attack-as-opnet-unlocks-smart-contract",
+      "source": "CoinDesk",
+      "date": "2026-03-19"
+    },
+    {
+      "text": "以太坊再质押协议EtherFi宣布向Plume Network分配2500万美元，布局实物资产（RWA）收益赛道，丰富其收益来源。",
+      "url": "https://cointelegraph.com/news/etherfi-turns-to-real-world-assets-for-yield-with-25m-plume-",
       "source": "CoinTelegraph",
-      "date": "2026-03-15"
+      "date": "2026-03-19"
     },
     {
-      "text": "Ledger 硬件钱包联合 MoonPay 推出 AI Agent 资金管控方案——用户可通过硬件钱包设置 AI Agent 的加密资产消费上限，为自主型 AI 代理提供链上资金隔离与授权机制。",
-      "url": "https://decrypt.co/361136/control-ai-agent-crypto-spending-ledger-hardware-wallets-moonpay",
-      "source": "Decrypt",
-      "date": "2026-03-15"
+      "text": "浏览器厂商Opera提议从Celo网络获取1.6亿枚CELO代币质押，占流通供应量的重要份额，拟成为Celo网络核心利益方。",
+      "url": "https://www.coindesk.com/business/2026/03/19/browser-maker-opera-seeks-160-million-celo-stake-to-become-key-network-stak",
+      "source": "CoinDesk",
+      "date": "2026-03-19"
     },
     {
-      "text": "Aave 与 CoW Swap 就 5000 万美元 DeFi 交换事故发布各自事后报告——双方对故障根因和责任归属存在分歧，引发社区对跨协议安全边界的广泛讨论。",
-      "url": "https://www.theblock.co/post/393621/aave-and-cow-swap-publish-dueling-post-mortems-after-50-million-defi-swap-disaster",
-      "source": "The Block",
-      "date": "2026-03-15"
-    },
-    {
-      "text": "Venus Protocol 遭供给上限攻击，损失约 370 万美元坏账——攻击者操控 Thena 的 THE 代币价格，利用协议定价机制漏洞完成套利。",
-      "url": "https://cointelegraph.com/news/venus-protocol-3-7-million-supply-cap-attack",
+      "text": "FBI发出警告，Tron链上出现冒充FBI名义的虚假代币，通过钓鱼攻击诱骗用户，提醒公众谨防链上诈骗。",
+      "url": "https://cointelegraph.com/news/fbi-warns-phishing-scam-tron-blockchain",
       "source": "CoinTelegraph",
-      "date": "2026-03-15"
+      "date": "2026-03-20"
+    }
+  ],
+  "competitor": [
+    {
+      "text": "Coinbase比特币收益基金（Bitcoin Yield Fund）通过与Apex Group合作，在Base链上完成代币化，成为首批在链上运行的大型机构加密基金之一。",
+      "url": "https://www.coindesk.com/business/2026/03/19/coinbase-s-bitcoin-yield-fund-goes-onchain-with-apex-s-tokenization-push",
+      "source": "CoinDesk",
+      "date": "2026-03-19"
+    },
+    {
+      "text": "OKX在链上发起的流动性激励活动结束后，DeFi风险管理平台Gauntlet遭遇3.8亿美元资金出走，反映交易所激励活动对协议流动性的显著拉动与退出效应。",
+      "url": "https://www.coindesk.com/tech/2026/03/19/defi-risk-management-giant-gauntlet-sees-usd380-million-exit-as-okx-crypto-campaign-ends",
+      "source": "CoinDesk",
+      "date": "2026-03-19"
     }
   ],
   "tradfi": [
     {
-      "text": "以太坊基金会以场外交易方式向 BitMine 出售价值 1020 万美元的 ETH——这是基金会近期少见的大规模 OTC 交易，市场关注其后续资金用途。",
-      "url": "https://cointelegraph.com/news/ethereum-foundation-sells-eth-to-bitmine-otc-deal",
+      "text": "华尔街知名机构Cantor Fitzgerald等多家投资银行正在竞相向加密交易公司FalconX递交IPO承销方案，FalconX上市进程提速。",
+      "url": "https://www.coindesk.com/business/2026/03/18/wall-street-heavyweight-cantor-among-investment-banks-pitching-falconx-for-its-potential-ipo",
+      "source": "CoinDesk",
+      "date": "2026-03-19"
+    },
+    {
+      "text": "Solana概念公司Forward Industries宣布通过加密资产抵押贷款融资，用于回购公司股份，开创传统上市公司利用链上资产进行资本运作的新模式。",
+      "url": "https://cointelegraph.com/news/forward-industries-solana-loan-share-buyback-galaxy",
       "source": "CoinTelegraph",
-      "date": "2026-03-15"
+      "date": "2026-03-19"
+    },
+    {
+      "text": "荷兰传统做市商IMC Trading任命Alex Casimo为加密业务首席商务官，加快拓展机构加密服务，传统金融机构持续加码加密布局。",
+      "url": "https://www.coindesk.com/business/2026/03/19/market-maker-imc-trading-hires-alex-casimo-as-chief-commercial-officer-for-",
+      "source": "CoinDesk",
+      "date": "2026-03-19"
     }
   ],
   "market": [
-    [
-      "BTC",
-      "$72,804",
-      "+2.36%"
-    ],
-    [
-      "标普500",
-      "6,632",
-      "-2.12%"
-    ],
-    [
-      "纳斯达克",
-      "22,105",
-      "-2.69%"
-    ],
-    [
-      "道琼斯",
-      "46,558",
-      "-1.81%"
-    ],
-    [
-      "美元指数DXY",
-      "100.50",
-      "+0.13%"
-    ],
-    [
-      "黄金",
-      "$4,983",
-      "-1.38%"
-    ],
-    [
-      "白银",
-      "$79.81",
-      "-1.36%"
-    ],
-    [
-      "WTI原油",
-      "$98.79",
-      "+0.08%"
-    ]
+    ["BTC", "$70,601", "-1.00%"],
+    ["标普500", "6,606", "-1.63%"],
+    ["纳斯达克", "22,091", "-1.73%"],
+    ["道琼斯", "46,021", "-2.07%"],
+    ["美元指数DXY", "100.00", "+0.13%"],
+    ["黄金", "$4,736", "-3.15%"],
+    ["白银", "$74.33", "-3.77%"],
+    ["WTI原油", "$93.93", "-2.48%"]
   ],
-  "summary": "地缘风险驱动美股普跌；BTC 逆势独涨，鲸鱼重返积累区间"
+  "summary": "季度四重到期日叠加中东地缘冲突，全球风险资产普跌，BTC在$70K附近承压震荡，黄金与大宗商品跌幅显著，监管层面《加密清晰法案》与SEC政策转型持续推进，市场情绪谨慎。"
 }
